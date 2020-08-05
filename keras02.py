@@ -17,8 +17,8 @@ model.compile(loss='mse', optimizer='adam',
 model.fit(x, y, epochs=100)
 
 loss, acc = model.evaluate(x, y)
-print("acc : ", acc)
-print("loss : ", loss)
+print("acc : ", acc) # 1에 가까울수록 좋은 모델
+print("loss : ", loss) # 0에 가까울수록 좋은 모델
 
 y_predict = model.predict(x2)
 print(y_predict)
