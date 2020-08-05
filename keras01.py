@@ -15,3 +15,8 @@ model.fit(x, y, epochs=100, batch_size=1)
 
 mse = model.evaluate(x, y, batch_size=1)
 print('mse : ', mse)
+
+'''
+mse : mean squared error
+평균 제곱 오차
+'''
