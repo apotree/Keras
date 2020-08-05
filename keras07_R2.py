@@ -31,13 +31,15 @@ print("loss : ", loss) # 0.06867540795356035
 y_predict = model.predict(x_test)
 print(y_predict)
 
-# RMSE 구하기
+# RMSE 구하기  RMSE : 평균 제곱근 오차
 from sklearn.metrics import mean_squared_error
 def RMSE( y_test, y_predict ):
     return np.sqrt(mean_squared_error(y_test, y_predict))
 print("RMSE : ", RMSE(y_test, y_predict))
 
 # R2 구하기
+# R2 : 회귀 모델에서 예측의 적합도를 0과 1 사이의 값으로 계산한 것.
+# 1은 예측이 완벽한 경우, 0은 훈련 세트의 출력값인 y_train의 평균으로만 예측하는 모델의 경우
 from sklearn.metrics import r2_score
 r2_y_predict = r2_score(y_test, y_predict)
 print("R2 : ", r2_y_predict)
